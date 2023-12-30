@@ -8,20 +8,23 @@
 </head>
 <body>
     <header>
-        <section class="logo">
-            <img src="iss.png" alt="logo">
-            <h1>ISS/KIN</h1>
+        <section class="top-header">
+            <section class="logo">
+                <img src="iss.png" alt="logo">
+                <h1>ISS/KIN</h1>
+            </section>
+            <img src="menu.png" alt="menu" id="menu">
         </section>
-        <nav  class="navigation">
+        <nav class="navigation" id="navigation">
             <ul>
                 <li>
-                    <a href="index">Acceuil</a>
+                    <a href="index" class="activelink">Acceuil</a>
                 </li>
                 <li>
                     <a href="promotion">Promotion</a>
                 </li>
                 <li>
-                    <a href="#" class="activelink">Inscription</a>
+                    <a href="#">Inscription</a>
                 </li>
                 <li>
                     <a href="about">Contact</a>
@@ -96,9 +99,9 @@
         }
         function closeMessage(){
             dialogInscription.close();
-            location.href = "index"
+            location.href = "index.html"
         }
-
     </script>
+    <script src="menu.js"></script>
 </body>
 </html>

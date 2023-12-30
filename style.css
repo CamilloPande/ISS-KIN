@@ -11,6 +11,16 @@ body{
     flex-direction:column;
 }
 
+.top-header{
+    display:flex;
+    background-color:navy;
+    justify-content:space-between;
+    align-items: center;
+    padding:0 20px;
+}
+
+
+
 /* navigation */
 
 header{
@@ -45,7 +55,7 @@ header{
     border-bottom:2px solid navy;
 }
 
-
+    
 /* other elements*/
 
 dialog{
@@ -64,6 +74,16 @@ dialog{
     right:0;
 }
 
+.top-header img{
+    width:30px;
+    height:30px;
+    cursor:pointer;
+}
+
+#menu{
+    visibility:hidden;
+}
+
 main img{
     border: 2px solid black;
     border-radius:15px;
@@ -73,6 +93,7 @@ main img{
 
 .logo img{
     width:120px;
+    height:70px;
 }
 
 .dev img{
@@ -115,38 +136,41 @@ main{
 .logo{
     display:flex;
     align-items:center;
-    background-color:navy;
     color:white;
 }
 
 .section{
     width:80%;
     max-width:600px;
-    text-align:start;
+    text-align:left;
     
 }
 .section-one{
     display:flex;
     justify-content:center;
     gap:20px;
-    width:70%;
+    width:80%;
+    text-align:left;
 }
 
 .form{
+    gap:20px;
     display:flex;
     flex-direction:column;
-    gap:30px;
+    justify-content: space-evenly;
 }
 
 .form div{
     display:flex;
-    gap:25px;
+    justify-content: space-evenly;
 }
 
 .form input, label, select{
     font-weight:bold;
     font-family:inherit;
     font-size:inherit;
+    width:100%; 
+    height:auto; 
 }
 
 .form input, select{
@@ -175,7 +199,7 @@ main{
 }
 
 
-@media(max-width:520px){
+@media(max-width:550px){
     .section-one{
         display:flex;
         flex-direction:column;
@@ -195,4 +219,45 @@ main{
         height:220px;
     }
 
+
 }
+
+@media(max-width:480px){
+    .navigation ul{
+        flex-direction:column;
+        align-items:center;
+        margin:0;
+        text-align: center;
+    }
+    .activelink{
+        border-bottom:none;
+    }
+    .navigation ul li{
+        width:100%;
+        border: 1px solid black;
+        padding:3px;
+    }
+    html{
+        font-size:1rem;
+    }
+    h1{
+        font-size:1.2rem;
+    }
+    #menu{
+        visibility:visible;
+    }
+    .navigation{
+        background-color: hsla(0, 0%, 0%, 0.676);
+        display:none;
+        position:fixed;
+        width:100%;
+    }
+    .navigation ul li a:visited{
+        color:white;
+    }
+    .navigation ul li a{
+        color:white;
+    }
+    
+}
+
